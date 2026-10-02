@@ -171,7 +171,7 @@ const sites = [
         <span class="var-tag">Asteroid</span>
       </div>
       <div class="section-label">Résultats (rendement pois)</div>
-      <div class="info-row"><span class="lbl">Rdt moyen associé</span><span class="val">16,8 q/ha (pois seul)</span></div>
+      <div class="info-row"><span class="lbl">Rdt moyen associé</span><span class="val">24,9 q/ha (à 14 %)(pois seul)</span></div>
       <div class="note-box green">✓ Station INRAE — association seule</div>`
   },
 
@@ -205,8 +205,8 @@ const sites = [
       </div>
       <div class="info-row"><span class="lbl">Bout de champ</span><span class="val">Visite d'essai en mai 2026, organisée par la Chambre d'Agriculture et Eureden (partage de regards avec les agriculteurs)</span></div>
       <div class="section-label">Résultats clés (rendement pois)</div>
-      <div class="info-row"><span class="lbl">Rdt moyen pur</span><span class="val">34,8 q/ha</span></div>
-      <div class="info-row"><span class="lbl">Rdt moyen associé</span><span class="val">28,0 q/ha (pois seul)</span></div>
+      <div class="info-row"><span class="lbl">Rdt moyen pur</span><span class="val">36,2 q/ha (à 14 %)</span></div>
+      <div class="info-row"><span class="lbl">Rdt moyen associé</span><span class="val">30,7 q/ha (à 14 %) (pois seul)</span></div>
       <div class="note-box green">✓ Essai suivi par la Chambre — données exploitables</div>`
   },
 
@@ -236,8 +236,8 @@ const sites = [
         <span class="var-tag">Asteroid</span>
       </div>
       <div class="section-label">Résultats (rendement pois)</div>
-      <div class="info-row"><span class="lbl">Rdt moyen pur</span><span class="val">50,5 q/ha (meilleur du réseau)</span></div>
-      <div class="info-row"><span class="lbl">Rdt moyen associé</span><span class="val">44,0 q/ha (pois seul)</span></div>
+      <div class="info-row"><span class="lbl">Rdt moyen pur</span><span class="val">50,4 q/ha (à 14 %) (meilleur du réseau)</span></div>
+      <div class="info-row"><span class="lbl">Rdt moyen associé</span><span class="val">43,9 q/ha (à 14 %) (pois seul)</span></div>
       <div class="note-box green">✓ Essai suivi par la Chambre — données exploitables</div>`
   },
 
@@ -269,7 +269,7 @@ const sites = [
       <div class="info-row"><span class="lbl">Historique pois</span><span class="val">Aucun pois depuis 56 ans sur cette parcelle, risque Aphanomyces faible</span></div>
       <div class="info-row"><span class="lbl">Interaction agriculteur</span><span class="val">Échanges faciles et réguliers avec l'agriculteur (suivi direct par la Chambre / la Chambre (CA29))</span></div>
       <div class="section-label">Résultats (rendement pois)</div>
-      <div class="info-row"><span class="lbl">Rdt moyen pur</span><span class="val">21,3 q/ha (pois seul)</span></div>
+      <div class="info-row"><span class="lbl">Rdt moyen pur</span><span class="val">21,1 q/ha (à 14 %) (pois seul)</span></div>
       <div class="section-label">Variétés</div>
       <div class="var-list">
         <span class="var-tag">Iconic</span><span class="var-tag">Cortex</span>
@@ -305,7 +305,7 @@ const sites = [
       <div class="info-row"><span class="lbl">Projet semence</span><span class="val">Récolte 2026 destinée à des semences de ferme, problème de bruche signalé</span></div>
       <div class="info-row"><span class="lbl">Interaction agriculteur</span><span class="val">Échanges faciles et réguliers avec l'agriculteur (réseau UFAB / Chambre)</span></div>
       <div class="section-label">Résultats (rendement pois)</div>
-      <div class="info-row"><span class="lbl">Rdt moyen associé</span><span class="val">13,6 q/ha (pois seul)</span></div>
+      <div class="info-row"><span class="lbl">Rdt moyen associé</span><span class="val">13,6 q/ha (pois seul,corrigé des reports)</span></div>
       <div class="section-label">Variétés</div>
       <div class="var-list">
         <span class="var-tag">Batist</span><span class="var-tag">Cortex</span>
@@ -341,7 +341,7 @@ const sites = [
       <div class="info-row"><span class="lbl">Interaction agriculteur</span><span class="val">Échanges faciles et réguliers (réseau UFAB / Chambre) ; agriculteur le plus expérimenté du réseau sur le pois</span></div>
       <div class="info-row"><span class="lbl">Bout de champ</span><span class="val">Visite d'essai en juin 2026, organisée par l'UFAB et Conseillère UFAB / CA35 (partage de regards avec les agriculteurs)</span></div>
       <div class="section-label">Résultats (rendement pois)</div>
-      <div class="info-row"><span class="lbl">Rdt moyen associé</span><span class="val">7,9 q/ha (pois seul)</span></div>
+      <div class="info-row"><span class="lbl">Rdt moyen associé</span><span class="val">7,9 q/ha (pois seul,corrigé des reports, Batist 17,2)</span></div>
       <div class="section-label">Variétés</div>
       <div class="var-list">
         <span class="var-tag">Batist</span><span class="var-tag">Cortex</span>
@@ -441,8 +441,10 @@ const sites = [
 
 // ===== CARTE =====
 const map = L.map('map', { center: [48.1, -2.8], zoom: 8 });
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap contributors', maxZoom: 16
+L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="https://www.openstreetmap.fr/">OSM France</a>',
+  subdomains: 'abc',
+  maxZoom: 19
 }).addTo(map);
 
 function makeIcon(s) {
